@@ -10,6 +10,14 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import Carousel from 'react-bootstrap/Carousel';
 
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import Card from 'react-bootstrap/Card';
+
+import Accordion from 'react-bootstrap/Accordion';
+
+
 function Pagina() {
 
   const [index, setIndex] = useState(0);
@@ -45,15 +53,17 @@ function Pagina() {
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
 
+        <Carousel.Item>
+          <img style={{ maxHeight: "100vh" }} className="d-block w-100" src={img02} alt='img02' />
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item>
-       
+        <img style={{ maxHeight: "100vh" }} className="d-block w-100" src={img03} alt='img03' />
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>
@@ -62,6 +72,62 @@ function Pagina() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+      <Container>
+        <h2>Staff</h2>
+        <Row xs={1} md={2} className="g-4">
+      {Array.from({ length: 5 }).map((_, idx) => (
+        <Col key={idx}>
+          <Card>
+            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Body>
+              <Card.Title>Card title</Card.Title>
+              <Card.Text>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+      <Row>
+        <Col>
+          <h2>Servicios</h2>
+          <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Accordion Item #1</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Accordion Item #2</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+        </Col>
+      
+        <Col>
+          <h2>Complte el formulario</h2>
+        </Col>
+      </Row>
+    </Container>
 
     </>
   );
