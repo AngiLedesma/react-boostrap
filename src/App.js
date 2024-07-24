@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Pagina from './components/Pagina';
 
-// import './App.css';
+ import './App.css';
 
 function App() {
   return (

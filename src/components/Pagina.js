@@ -17,6 +17,11 @@ import Card from 'react-bootstrap/Card';
 
 import Accordion from 'react-bootstrap/Accordion';
 
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+
+
 
 function Pagina() {
 
@@ -63,7 +68,7 @@ function Pagina() {
         </Carousel.Item>
 
         <Carousel.Item>
-        <img style={{ maxHeight: "100vh" }} className="d-block w-100" src={img03} alt='img03' />
+          <img style={{ maxHeight: "100vh" }} className="d-block w-100" src={img03} alt='img03' />
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>
@@ -74,60 +79,132 @@ function Pagina() {
       </Carousel>
 
       <Container>
-        <h2>Staff</h2>
-        <Row xs={1} md={2} className="g-4">
-      {Array.from({ length: 5 }).map((_, idx) => (
-        <Col key={idx}>
-          <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-      <Row>
-        <Col>
-          <h2>Servicios</h2>
-          <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Accordion Item #1</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
-        </Col>
-      
-        <Col>
-          <h2>Complte el formulario</h2>
-        </Col>
-      </Row>
-    </Container>
+        <h2 className='margen'>Staff</h2>
+        <Row xs={1} md={5} className="g-4">
+          {Array.from({ length: 5 }).map((_, idx) => (
+            <Col key={idx}>
+              <Card>
+                <Card.Img variant="top" src="holder.js/100px160" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This is a longer card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        <Row>
+          <Col>
+            <h2 className='margen'>Servicios</h2>
+            <Accordion defaultActiveKey="0">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>Ferroviario</Accordion.Header>
+                <Accordion.Body>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>Maritimo</Accordion.Header>
+                <Accordion.Body>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="2">
+                <Accordion.Header>Aereo</Accordion.Header>
+                <Accordion.Body>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum.
+                </Accordion.Body>
+              </Accordion.Item>
+
+              <Accordion.Item eventKey="4">
+                <Accordion.Header>Terrestre</Accordion.Header>
+                <Accordion.Body>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum.
+                </Accordion.Body>
+              </Accordion.Item>
+
+
+            </Accordion>
+          </Col>
+
+        </Row>
+
+        <Form>
+          <h2 className='margen'>Complete el formulario</h2>
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Label>Nombre</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formGridPassword">
+              <Form.Label>Apellido</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+          </Row>
+
+          <Form.Group className="mb-3" controlId="formGridAddress1">
+            <Form.Label>Direccion</Form.Label>
+            <Form.Control />
+          </Form.Group>
+
+
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formGridCity">
+              <Form.Label>Ciudad</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+
+            <Form.Group as={Col} controlId="formGridZip">
+              <Form.Label>Zip</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+          {/* 
+          <Form.Group className="mb-3" id="formGridCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group> */}
+
+          <Button variant="danger" type="submit">
+            Enviar
+          </Button>
+        </Form>
+      </Container>
+
+
+<footer>Disegnato per : Angi Ledesma</footer >
+
 
     </>
   );
